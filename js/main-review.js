@@ -8,7 +8,7 @@ Array.prototype.shuffle = function () {
   return this;
 };
 
-const memorys = [
+const cardArr = [
   { idx: 0, title: "mouse", img: "images/12jisin/mouse.svg" },
   { idx: 1, title: "cow", img: "images/12jisin/cow.svg" },
   { idx: 2, title: "tiger", img: "images/12jisin/tiger.svg" },
@@ -22,8 +22,9 @@ const memorys = [
   // { idx: 10, title: "dog", img: "images/12jisin/dog.svg" },
   // { idx: 11, title: "pig", img: "images/12jisin/pig.svg" },
 ];
+
+const doubleCardArr = [...cardArr, ...cardArr].shuffle();
 const main = document.querySelector("#main");
-const doubleMemorys = [...memorys, ...memorys].shuffle();
 const ul = document.createElement("ul");
 doubleMemorys.forEach(function (item, idx) {
   const li = document.createElement("li");
